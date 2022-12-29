@@ -1,8 +1,16 @@
 #!/bin/bash
 
-rm -rf ~/.config/nvim/
-mkdir -p ~/.config/nvim/lua/
+NVIM_DIR="${HOME}/.config/nvim"
 
-cp -f ./init.lua ~/.config/nvim/init.lua
-cp -rf ./lua/ ~/.config/nvim/lua/
+if [ -L $NVIM_DIR ]; then
+	unlink $NVIM_DIR
+fi
+if [ -d $NVIM_DIR ]; then
+	rm -rf $NVIM_DIR
+fi
+
+mkdir -p "${NVIM_DIR}/lua/"
+
+cp -f ./init.lua "${NVIM_DIR}/init.lua"
+cp -rf ./lua/ "${NVIM_DIR}"
 
