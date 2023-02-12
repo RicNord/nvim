@@ -1,5 +1,6 @@
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
+	vim.notify("Failed to requier null-ls")
 	return
 end
 
@@ -13,7 +14,7 @@ null_ls.setup({
 	sources = {
 		--		formatting.prettier,
 		formatting.black,
-		formatting.stylua,
+		-- formatting.stylua,
 		-- diagnostics.flake8
 	},
 })

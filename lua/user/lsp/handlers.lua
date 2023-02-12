@@ -2,6 +2,7 @@ local M = {}
 
 local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_cmp_ok then
+	vim.notify("Failed to requier cmp_nvim_lsp in handlers.lua")
 	return
 end
 
@@ -58,6 +59,7 @@ M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then
+	    vim.notify("Failed to requier illuminate")
 		return
 	end
 	illuminate.on_attach(client)
