@@ -10,7 +10,7 @@ to the proper location.
 
 ## Usefull commands
 - `PackerSync` to download and install packages.
-- `LSPxxx` to run various LSP commands.
+- `LspXxx` to run various LSP commands.
 - `Mason` for language server installations.
 
 ## Cleanup from previous installation
