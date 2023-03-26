@@ -12,9 +12,27 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		--		formatting.prettier,
+        -- Python
 		formatting.black,
-		-- formatting.stylua,
-		-- diagnostics.flake8
+        formatting.isort,
+		diagnostics.flake8,
+        -- Lua
+		formatting.stylua,
+        -- Bash
+        diagnostics.shellcheck,
+        formatting.shfmt,
+        ---- Terraform
+        --diagnostics.terraform_validate,
+        --formatting.terraform_fmt,
+        ---- Yaml
+        --formatting.yamlfmt,
+        --diagnostics.yamllint,
+        ---- SQL
+        --formatting.sqlfluff,
+        --diagnostics.sqlfluff,
+        ---- JavaScript
+		--formatting.prettier,
+        ---- Scala
+        --formatting.scalafmt
 	},
 })
