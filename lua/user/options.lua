@@ -10,10 +10,11 @@ local options = {
 	ignorecase = true, -- ignore case in search patterns
 	mouse = "a", -- allow the mouse to be used in neovim
 	showmode = true,
-
     showtabline = 2, -- always show tabs
+
 	smartcase = true, -- smart case
-	smartindent = true, -- make indenting smarter again
+    autoindent = true, -- apply current row indentation on new created adjacent row
+	smartindent = true, -- make indenting smarter with help of syntax/style
 
 	splitbelow = true, -- force all horizontal splits to go below current window
 	splitright = true, -- force all vertical splits to go to the right of current window
@@ -22,8 +23,8 @@ local options = {
 
 	expandtab = true, -- convert tabs to spaces
 	shiftwidth = 4, -- the number of spaces inserted for each indentation
-	tabstop = 4, -- insert 2 spaces for a tab
-	softtabstop = 4,
+	tabstop = 4, -- insert 4 spaces for a tab
+	softtabstop = 4, -- insermode tab option
 	number = true, -- set numbered lines
 	relativenumber = true, -- set relative numbered lines
 
