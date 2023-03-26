@@ -12,27 +12,33 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-        -- Python
+		-- Python
 		formatting.black,
-        formatting.isort,
+		formatting.isort,
 		diagnostics.flake8,
-        -- Lua
+		-- Lua
 		formatting.stylua,
-        -- Bash
-        diagnostics.shellcheck,
-        formatting.shfmt,
-        ---- Terraform
-        --diagnostics.terraform_validate,
-        --formatting.terraform_fmt,
-        ---- Yaml
-        --formatting.yamlfmt,
-        --diagnostics.yamllint,
-        ---- SQL
-        --formatting.sqlfluff,
-        --diagnostics.sqlfluff,
-        ---- JavaScript
+		-- Bash
+		diagnostics.shellcheck,
+		formatting.shfmt.with({
+			extra_args = {
+				"-i", "4", -- indent 4 spaces
+				"-bn", -- allow binary ops like && and | to start line
+				"-ci", -- indent switch cases
+			},
+		}),
+		---- Terraform
+		--diagnostics.terraform_validate,
+		--formatting.terraform_fmt,
+		---- Yaml
+		--formatting.yamlfmt,
+		--diagnostics.yamllint,
+		---- SQL
+		--formatting.sqlfluff,
+		--diagnostics.sqlfluff,
+		---- JavaScript
 		--formatting.prettier,
-        ---- Scala
-        --formatting.scalafmt
+		---- Scala
+		--formatting.scalafmt
 	},
 })
