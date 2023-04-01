@@ -16,19 +16,19 @@ null_ls.setup({
 		formatting.black,
 		formatting.isort,
 		diagnostics.flake8.with({
-            extra_args = {
-                "--extend-ignore",
-                "E501", -- line too long
-            }
-        }
-        ),
+			extra_args = {
+				"--extend-ignore",
+				"E501", -- line too long
+			},
+		}),
 		-- Lua
 		formatting.stylua,
 		-- Bash
 		diagnostics.shellcheck,
 		formatting.shfmt.with({
 			extra_args = {
-				"-i", "4", -- indent 4 spaces
+				"-i",
+				"4", -- indent 4 spaces
 				"-bn", -- allow binary ops like && and | to start line
 				"-ci", -- indent switch cases
 			},
