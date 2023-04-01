@@ -18,7 +18,7 @@ local options = {
 
 	splitbelow = true, -- force all horizontal splits to go below current window
 	splitright = true, -- force all vertical splits to go to the right of current window
-	-- termguicolors = true,                    -- set term gui colors (most terminals support this)
+	termguicolors = true,                    -- set term gui colors (most terminals support this)
 	updatetime = 300, -- faster completion (4000ms default)
 
 	expandtab = true, -- convert tabs to spaces
