@@ -15,7 +15,11 @@ M.setup = function()
 		update_in_insert = false, -- set to true for enable in insert mode.
 		underline = true,
 		severity_sort = true,
-		virtual_text = true,
+		virtual_text = { source = "if_many" },
+		float = {
+			source = "always",
+			scope = "b",
+		},
 	}
 
 	vim.diagnostic.config(config)
@@ -59,7 +63,7 @@ M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then
-	    vim.notify("Failed to requier illuminate")
+		vim.notify("Failed to requier illuminate")
 		return
 	end
 	illuminate.on_attach(client)
