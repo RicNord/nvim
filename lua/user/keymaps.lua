@@ -19,3 +19,6 @@ keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- Show diagnostics of line
+keymap("n", "<leader>df", "<cmd>lua vim.diagnostic.open_float({ scope = 'l', source = 'always' })<CR>", opts)
