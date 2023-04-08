@@ -37,7 +37,12 @@ null_ls.setup({
 		--diagnostics.terraform_validate,
 		--formatting.terraform_fmt,
 		---- Yaml
-		formatting.yamlfmt,
+		formatting.yamlfmt.with({
+			extra_args = {
+				"-formatter",
+				"retain_line_breaks=true,scan_folded_as_literal=true",
+			},
+		}),
 		--diagnostics.yamllint,
 		---- SQL
 		--formatting.sqlfluff,
