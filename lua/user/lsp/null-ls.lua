@@ -15,16 +15,16 @@ null_ls.setup({
 		-- Python
 		formatting.black,
 		formatting.isort,
-		diagnostics.flake8.with({
-			extra_args = {
-				"--extend-ignore",
-				"E501", -- line too long
-			},
-		}),
+		--diagnostics.flake8.with({
+		--	extra_args = {
+		--		"--extend-ignore",
+		--		"E501", -- line too long
+		--	},
+		--}),
 		-- Lua
 		formatting.stylua,
 		-- Bash
-		diagnostics.shellcheck,
+		--diagnostics.shellcheck,
 		formatting.shfmt.with({
 			extra_args = {
 				"-i",
