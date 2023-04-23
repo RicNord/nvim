@@ -23,7 +23,7 @@ local options = {
 
 	expandtab = true, -- convert tabs to spaces
 	shiftwidth = 4, -- the number of spaces inserted for each indentation
-	tabstop = 4, -- insert 4 spaces for a tab
+	tabstop = 4, -- show 4 spaces for a tab (some git providers use 8 by default)
 	softtabstop = 4, -- insermode tab option
 	number = true, -- set numbered lines
 	relativenumber = true, -- set relative numbered lines
