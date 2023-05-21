@@ -13,6 +13,7 @@ local servers = {
 	"terraformls",
 	"taplo",
 	"marksman",
+	"clangd",
 }
 
 require("mason").setup()
