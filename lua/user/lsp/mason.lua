@@ -1,6 +1,5 @@
 local servers = {
 	"ansiblels",
-	"azure_pipelines_ls",
 	"bashls",
 	"bicep",
 	"clangd",
