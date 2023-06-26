@@ -23,6 +23,12 @@ null_ls.setup({
 		--}),
 		-- Lua
 		formatting.stylua,
+		formatting.markdownlint.with({
+            extra_args = {
+                "--config",
+                "~/.markdownlint.jsonc"
+            }
+        }),
 		-- Bash
 		--diagnostics.shellcheck,
 		formatting.shfmt.with({
