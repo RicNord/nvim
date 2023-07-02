@@ -14,7 +14,12 @@ null_ls.setup({
 	sources = {
 		-- Python
 		formatting.black,
-		formatting.isort,
+		formatting.isort.with({
+			extra_args = {
+				"--profile",
+				"black",
+			},
+		}),
 		--diagnostics.flake8.with({
 		--	extra_args = {
 		--		"--extend-ignore",
@@ -24,11 +29,11 @@ null_ls.setup({
 		-- Lua
 		formatting.stylua,
 		formatting.markdownlint.with({
-            extra_args = {
-                "--config",
-                "~/.markdownlint.jsonc"
-            }
-        }),
+			extra_args = {
+				"--config",
+				"~/.markdownlint.jsonc",
+			},
+		}),
 		-- Bash
 		--diagnostics.shellcheck,
 		formatting.shfmt.with({
