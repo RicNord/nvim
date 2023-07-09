@@ -1,6 +1,10 @@
 # My neovim configuration
 The intention is to stay as close to the default values/convetions as possible.
 
+## Keybindings
+
+[Keybindings](./keybindings.md)
+
 ## Shell scripts
 - For development run `link-repo.sh` to remove previous config and create
 a soft link to this repo.
