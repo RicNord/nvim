@@ -30,16 +30,15 @@ if not status_ok then
 	return
 end
 
-
 -- Install your plugins here
 return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim" }) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
-    --
+	--
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
-    --
+	--
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
@@ -72,8 +71,8 @@ return packer.startup(function(use)
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
 
-    -- Undotree
-    use('mbbill/undotree')
+	-- Undotree
+	use("mbbill/undotree")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
