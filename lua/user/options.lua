@@ -10,15 +10,15 @@ local options = {
 	ignorecase = true, -- ignore case in search patterns
 	mouse = "a", -- allow the mouse to be used in neovim
 	showmode = true,
-    showtabline = 2, -- always show tabs
+	showtabline = 2, -- always show tabs
 
 	smartcase = true, -- smart case
-    autoindent = true, -- apply current row indentation on new created adjacent row
+	autoindent = true, -- apply current row indentation on new created adjacent row
 	smartindent = true, -- make indenting smarter with help of syntax/style
 
 	splitbelow = true, -- force all horizontal splits to go below current window
 	splitright = true, -- force all vertical splits to go to the right of current window
-	termguicolors = true,                    -- set term gui colors (most terminals support this)
+	termguicolors = true, -- set term gui colors (most terminals support this)
 	updatetime = 300, -- faster completion (4000ms default)
 
 	expandtab = true, -- convert tabs to spaces
