@@ -37,8 +37,8 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
 	--
 	-- Colorschemes
---	use({ "folke/tokyonight.nvim" })
---	use({ "catppuccin/nvim", as = "catppuccin" })
+	--	use({ "folke/tokyonight.nvim" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	--
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
