@@ -3,7 +3,7 @@ The intention is to stay as close to the default values/convetions as possible.
 
 ## Keybindings
 
-[Keybindings](./keybindings.md)
+[Added Keybindings](./added-keybindings.md)
 
 ## Shell scripts
 - For development run `link-repo.sh` to remove previous config and create
