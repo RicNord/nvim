@@ -15,6 +15,7 @@ else
 	require("user.treesitter")
 	require("user.autopairs")
 	require("user.undotree")
+	require("user.autocmd")
 end
 
 -- See `:h clipboard-wsl`
