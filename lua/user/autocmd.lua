@@ -9,5 +9,5 @@ vim.api.nvim_create_autocmd({ "FileType", "BufEnter", "BufAdd" }, {
 			vim.opt["colorcolumn"] = "80"
 		end
 	end,
-    buffer = 1
+    buffer = 0
 })
