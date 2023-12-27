@@ -31,7 +31,7 @@ null_ls.setup({
 		formatting.markdownlint.with({
 			extra_args = {
 				"--config",
-				"~/.markdownlint.jsonc",
+				"~/.formatting/.markdownlint.jsonc",
 			},
 		}),
 		-- Bash
