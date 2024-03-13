@@ -45,3 +45,8 @@
 ## Undotree
 
 - `<leader>u` toggle undotree
+
+## Rooter
+
+- `<leader>cdc` set open file buffer locaion as cwd
+- `<leader>cdr` set root of repo or fallback metaroot as cwd
