@@ -4,6 +4,7 @@ local root_names = { ".git", ".meta_root" }
 -- Cache to use for speed up (at cost of possibly outdated results)
 local root_cache = {}
 
+-- TODO feature: when open nvim without file. Track path for rooter
 local set_root = function()
 	-- Get directory path to start search from
 	local path = vim.api.nvim_buf_get_name(0)
@@ -29,3 +30,6 @@ end
 
 local root_augroup = vim.api.nvim_create_augroup("MyAutoRoot", {})
 vim.api.nvim_create_autocmd("BufEnter", { group = root_augroup, callback = set_root })
+
+-- Set keymap leader cdr to get to root
+vim.keymap.set("n", "<leader>cdr", set_root, {noremap = true })
