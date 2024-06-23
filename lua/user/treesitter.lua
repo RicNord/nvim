@@ -32,6 +32,8 @@ configs.setup({
 		"toml",
 		"tsx",
 		"typescript",
+		"vim",
+		"vimdoc",
 		"xml",
 		"yaml",
 	}, -- one of "all" or a list of languages
