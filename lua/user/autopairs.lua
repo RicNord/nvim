@@ -15,14 +15,17 @@ npairs.setup({
 	fast_wrap = {
 		map = "<M-e>",
 		chars = { "{", "[", "(", '"', "'" },
-		pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
-		offset = 0, -- Offset from pattern match
+		pattern = [=[[%'%"%>%]%)%}%,]]=],
 		end_key = "$",
+		before_key = "h",
+		after_key = "l",
+		cursor_pos_before = true,
 		keys = "qwertyuiopzxcvbnmasdfghjkl",
-		check_comma = true,
-		highlight = "PmenuSel",
-		highlight_grey = "LineNr",
+		manual_position = true,
+		highlight = "Search",
+		highlight_grey = "Comment",
 	},
+	enable_check_bracket_line = false, -- dont add pair if it exist unclosed on same line
 })
 
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
