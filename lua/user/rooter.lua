@@ -32,4 +32,4 @@ local root_augroup = vim.api.nvim_create_augroup("MyAutoRoot", {})
 vim.api.nvim_create_autocmd("BufEnter", { group = root_augroup, callback = set_root })
 
 -- Set keymap leader cdr to get to root
-vim.keymap.set("n", "<leader>cdr", set_root, {noremap = true })
+vim.keymap.set("n", "<leader>cdr", set_root, { noremap = true })
