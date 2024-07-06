@@ -28,7 +28,7 @@
 
 - `<leader>df` Open diagnostics window
 
-#### Resize windows
+### Resize windows
 
 - `<C-Up>` Up
 - `<C-Down>` Down
@@ -48,5 +48,5 @@
 
 ## Rooter
 
-- `<leader>cdc` set open file buffer locaion as cwd
+- `<leader>cdc` set open file buffer location as cwd
 - `<leader>cdr` set root of repo or fallback metaroot as cwd
