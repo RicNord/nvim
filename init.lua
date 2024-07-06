@@ -14,7 +14,6 @@ else
 	require("user.gitsigns")
 	require("user.treesitter")
 	require("user.autopairs")
-	require("user.undotree")
 	require("user.autocmd")
 	require("user.rooter")
 end

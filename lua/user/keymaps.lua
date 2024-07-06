@@ -25,3 +25,6 @@ keymap("n", "<leader>df", "<cmd>lua vim.diagnostic.open_float({ scope = 'l', sou
 
 -- Set filepath of buffer as cwd
 keymap("n", "<leader>cdc", "<cmd>lua vim.fn.chdir(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))<CR>", opts)
+
+-- Undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
