@@ -24,6 +24,11 @@
 - `<C-e>` abort
 - `<Tab>` confirm
 
+## Luasnip
+
+- `<C-l>` Jump forward
+- `<C-j>` Jump backward
+
 ## Global
 
 - `<leader>df` Open diagnostics window

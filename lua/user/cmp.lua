@@ -1,16 +1,14 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-	vim.notify("Failed to requier cmp")
+	vim.notify("Failed to require cmp")
 	return
 end
 
 local snip_status_ok, _ = pcall(require, "luasnip")
 if not snip_status_ok then
-	vim.notify("Failed to requier luasnip")
+	vim.notify("Failed to require luasnip")
 	return
 end
-
-require("luasnip/loaders/from_vscode").lazy_load()
 
 cmp.setup({
 	snippet = {
