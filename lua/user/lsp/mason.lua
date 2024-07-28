@@ -7,6 +7,7 @@ local servers = {
 	"docker_compose_language_service",
 	"dockerls",
 	"dotls",
+	"esbonio", -- Sphinx LSP
 	"gopls",
 	"html",
 	"jsonls",
