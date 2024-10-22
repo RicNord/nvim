@@ -17,6 +17,7 @@ else
 	require("user.autopairs")
 	require("user.autocmd")
 	require("user.rooter")
+	require("user.find_and_replace_multi")
 end
 
 -- See `:h clipboard-wsl`
