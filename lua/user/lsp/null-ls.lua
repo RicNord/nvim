@@ -12,20 +12,6 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		-- Python
-		formatting.black,
-		formatting.isort.with({
-			extra_args = {
-				"--profile",
-				"black",
-			},
-		}),
-		--diagnostics.flake8.with({
-		--	extra_args = {
-		--		"--extend-ignore",
-		--		"E501", -- line too long
-		--	},
-		--}),
 		-- Lua
 		formatting.stylua,
 		formatting.markdownlint.with({

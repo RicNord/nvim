@@ -15,6 +15,7 @@ local servers = {
 	"marksman",
 	"powershell_es",
 	"pyright",
+	"ruff",
 	"sqlls",
 	"taplo",
 	"terraformls",
