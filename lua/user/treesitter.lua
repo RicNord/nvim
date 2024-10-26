@@ -8,6 +8,7 @@ configs.setup({
 		"bash",
 		"bicep",
 		"c",
+		"c_sharp",
 		"css",
 		"diff",
 		"dockerfile",

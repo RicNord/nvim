@@ -3,6 +3,7 @@ local servers = {
 	"bashls",
 	"bicep",
 	"clangd",
+	"csharp_ls",
 	"cssls",
 	"docker_compose_language_service",
 	"dockerls",
