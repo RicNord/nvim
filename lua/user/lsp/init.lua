@@ -22,3 +22,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 	desc = "LSP: Disable hover capability from Ruff",
 })
+
+vim.lsp.set_log_level("OFF") -- Turn on when debugging
