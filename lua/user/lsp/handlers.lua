@@ -59,6 +59,10 @@ M.on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
+    if client.name == "ruff" then
+    	-- Disable hover in favor of Pyright
+    	client.server_capabilities.hoverProvider = false
+    end
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
