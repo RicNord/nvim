@@ -5,6 +5,6 @@ end
 
 require("user.lsp.mason")
 require("user.lsp.handlers").setup()
-require("user.lsp.null-ls")
+--require("user.lsp.null-ls")
 
 vim.lsp.set_log_level("OFF") -- Turn on when debugging
