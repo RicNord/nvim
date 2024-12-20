@@ -1,9 +1,9 @@
 -- Use internal formatting for bindings like gq.
-vim.api.nvim_create_autocmd("LspAttach", {
-    callback = function(args)
-        vim.bo[args.buf].formatexpr = nil
-    end,
-})
+--vim.api.nvim_create_autocmd("LspAttach", {
+--    callback = function(args)
+--        vim.bo[args.buf].formatexpr = nil
+--    end,
+--})
 
 -- Set colorcolumn specifics for filetypes
 --local group = vim.api.nvim_create_augroup("colorcolumn_options", { clear = true })
