@@ -3,9 +3,9 @@ return {
     {
         "williamboman/mason.nvim",
         config = function()
-            require("mason").setup {
+            require("mason").setup({
                 ui = { border = "rounded" },
-            }
+            })
         end,
     },
     -- Mason LSPConfig for integrating Mason with nvim-lspconfig
@@ -37,10 +37,10 @@ return {
                 "terraformls",
                 "yamlls",
             }
-            require("mason-lspconfig").setup {
+            require("mason-lspconfig").setup({
                 ensure_installed = lsp,
                 automatic_installation = true,
-            }
+            })
         end,
     },
 
@@ -60,16 +60,14 @@ return {
             vim.lsp.set_log_level("OFF") -- Turn on when debugging
 
             -- Diagnostics
-            vim.diagnostic.config(
-                {
-                    virtual_text = { source = "if_many" },
-                    severity_sort = true,
-                    float = {
-                        source = true,
-                        scope = "buffer",
-                    },
-                }
-            )
+            vim.diagnostic.config({
+                virtual_text = { source = "if_many" },
+                severity_sort = true,
+                float = {
+                    source = true,
+                    scope = "buffer",
+                },
+            })
 
             -- LSP capabilities
             local capabilities = cmp_nvim_lsp.default_capabilities()

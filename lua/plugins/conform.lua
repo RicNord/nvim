@@ -21,7 +21,7 @@ return {
             lua = { "stylua" },
             yaml = { "yamlfmt" },
             markdown = { "markdownlint" },
-            sh = { "shfmt" }
+            sh = { "shfmt" },
         },
         -- Set default options
         default_format_opts = {
@@ -31,9 +31,10 @@ return {
         formatters = {
             shfmt = {
                 prepend_args = {
-                    "-i", "4", -- indent 4 spaces
-                    "-bn",     -- allow binary ops like && and | to start line
-                    "-ci",     -- indent switch cases
+                    "-i",
+                    "4", -- indent 4 spaces
+                    "-bn", -- allow binary ops like && and | to start line
+                    "-ci", -- indent switch cases
                 },
             },
         },

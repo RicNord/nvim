@@ -16,9 +16,9 @@ return {
 
     -- Autopairs
     {
-        'windwp/nvim-autopairs',
+        "windwp/nvim-autopairs",
         event = "InsertEnter",
-        config = true
+        config = true,
     },
 
     -- Git
@@ -34,8 +34,7 @@ return {
                 untracked = { text = "┆" },
             },
             attach_to_untracked = true,
-
-        }
+        },
     },
 
     -- Undotree

@@ -53,7 +53,6 @@ return {
             autopairs = {
                 enable = true,
             },
-        }
-        )
-    end
+        })
+    end,
 }
