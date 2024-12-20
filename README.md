@@ -1,6 +1,7 @@
 # My Neovim configuration
 
-The intention is to stay as close to the default values/conventions as possible.
+The intention is to stay as close to the default values/conventions as possible
+and minimize bloat.
 
 ## Keybindings for plugins etc
 
@@ -15,12 +16,17 @@ The intention is to stay as close to the default values/conventions as possible.
 
 ## Useful commands
 
-- `PackerSync` to download and install packages.
+- `Lazy` plugin manager
 - `LspXxx` to run various LSP commands.
 - `Mason` for language server installations.
 
 ## Cleanup from previous installation
 
 - `~/.config/nvim/`
-- Packages stored at `~/.local/share/nvim` (`/site/pack/packer`) and also logs
-  `~/.cache/nvim`
+- `~/.local/share/nvim`
+- `~/.local/state/nvim`
+- `~/.cache/nvim`
+
+## TODO
+
+- Manage lazy lock file

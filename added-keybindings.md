@@ -5,16 +5,17 @@
 - `gD` go to declaration
 - `gd` go to definition
 - `K` hover definition
-- `gi` implementation
-- `<C-k>` signature help
+- `gri` implementation
+- `<C-k>` signature help (normal mode)
+- `<C-s>` signature help (insert mode)
 - `<space>wa` add workspace folder
 - `<space>wr` remove workspace folder
 - `<space>wl` list workspace folders
 - `<space>D` type definition
-- `<space>rn` rename
-- `<space>ca` code action
-- `gr` references
-- `<space>f` auto format
+- `grn` rename
+- `gra` code action
+- `grr` references
+- `<space>f` auto format (prioritize the conform plugin and fall back to lsp)
 
 ## CMP
 
