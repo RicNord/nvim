@@ -10,7 +10,26 @@ return {
         "hrsh7th/cmp-cmdline",
         "saadparwaiz1/cmp_luasnip",
         "rafamadriz/friendly-snippets",
-        { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
+        {
+            "L3MON4D3/LuaSnip",
+            build = "make install_jsregexp",
+            config = function()
+                local ls = require("luasnip")
+
+                -- Load VS Code-style snippets after LuaSnip is loaded
+                local vs_ls = require("luasnip/loaders/from_vscode")
+                vs_ls.lazy_load() -- Snippets
+
+                -- Key mappings for jumping through snippets
+                vim.keymap.set({ "i", "s" }, "<C-L>", function()
+                    ls.jump(1) -- Jump forward
+                end, { silent = true })
+
+                vim.keymap.set({ "i", "s" }, "<C-J>", function()
+                    ls.jump(-1) -- Jump back
+                end, { silent = true })
+            end
+        },
     },
     opts = {
         snippet = {
@@ -18,24 +37,24 @@ return {
                 require("luasnip").lsp_expand(args.body)
             end,
         },
-        mapping = require("cmp").mapping.preset.insert({
-            ["<C-b>"] = require("cmp").mapping.scroll_docs(-4),
-            ["<C-f>"] = require("cmp").mapping.scroll_docs(4),
-            ["<C-Space>"] = require("cmp").mapping.complete(),
-            ["<C-e>"] = require("cmp").mapping.abort(),
-            ["<Tab>"] = require("cmp").mapping.confirm({ select = true }),
-        }),
-        sources = require("cmp").config.sources({
+    },
+    config = function()
+        local cmp = require("cmp")
+        cmp.mapping.preset.insert({
+            ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+            ["<C-f>"] = cmp.mapping.scroll_docs(4),
+            ["<C-Space>"] = cmp.mapping.complete(),
+            ["<C-e>"] = cmp.mapping.abort(),
+            ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+        })
+        cmp.config.sources({
             { name = "nvim_lua" },
             { name = "nvim_lsp" },
             { name = "luasnip" },
             { name = "path" },
         }, {
             { name = "buffer", keyword_length = 3 },
-        }),
-    },
-    config = function()
-        local cmp = require("cmp")
+        })
         -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
         cmp.setup.cmdline({ "/", "?" }, {
             mapping = cmp.mapping.preset.cmdline(),

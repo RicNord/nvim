@@ -16,7 +16,8 @@ return {
     { "williamboman/mason-lspconfig.nvim" },
     { "neovim/nvim-lspconfig" },
 
-    { "RRethy/vim-illuminate" }, -- highlights all equal words as selected
+    -- Highlights all equal words as selected
+    { "RRethy/vim-illuminate" },
 
     -- Autopairs
     {
