@@ -1,13 +1,13 @@
 return {
-  -- Mason for managing external tools and LSP servers
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup {
-        ui = { border = "rounded" },
-      }
-    end,
-  },
+    -- Mason for managing external tools and LSP servers
+    {
+        "williamboman/mason.nvim",
+        config = function()
+            require("mason").setup {
+                ui = { border = "rounded" },
+            }
+        end,
+    },
     -- Mason LSPConfig for integrating Mason with nvim-lspconfig
     {
         "williamboman/mason-lspconfig.nvim",
@@ -59,16 +59,20 @@ return {
             -- LSP log level
             vim.lsp.set_log_level("OFF") -- Turn on when debugging
 
+            -- Diagnostics
+            vim.diagnostic.config(
+                {
+                    virtual_text = { source = "if_many" },
+                    severity_sort = true,
+                    float = {
+                        source = true,
+                        scope = "buffer",
+                    },
+                }
+            )
+
             -- LSP capabilities
             local capabilities = cmp_nvim_lsp.default_capabilities()
-
-            -- Diagnostics configuration
-            vim.diagnostic.config {
-                virtual_text = { source = "if_many" },
-                float = {
-                    scope = "line",
-                },
-            }
 
             -- LSP key mappings
             local function lsp_keymaps(bufnr)
@@ -82,16 +86,10 @@ return {
                     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
                 end, bufopts)
                 vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, bufopts)
-                vim.keymap.set("n", "<space>f", function()
-                    vim.lsp.buf.format({ async = true })
-                end, bufopts)
             end
 
             -- On_attach function
-            local function on_attach(client, bufnr)
-                if client.name == "ruff" then
-                    client.server_capabilities.hoverProvider = false -- Disable hover in favor of Pyright
-                end
+            local function on_attach(_, bufnr)
                 lsp_keymaps(bufnr)
             end
 
@@ -120,10 +118,21 @@ return {
                 },
             }
 
-            for server, config in pairs(servers) do
-                config.capabilities = capabilities
-                config.on_attach = on_attach
-                lspconfig[server].setup(config)
+            -- Default LSP configuration
+            local default_config = {
+                capabilities = capabilities,
+                on_attach = on_attach,
+            }
+
+            -- Setup all servers
+            local mason_lspconfig = require("mason-lspconfig")
+            local installed_servers = mason_lspconfig.get_installed_servers()
+
+            for _, server in ipairs(installed_servers) do
+                local config = servers[server] or {}
+                config.capabilities = config.capabilities or capabilities
+                config.on_attach = config.on_attach or on_attach
+                lspconfig[server].setup(vim.tbl_extend("force", default_config, config))
             end
         end,
     },
