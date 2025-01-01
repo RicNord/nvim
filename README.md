@@ -13,6 +13,8 @@ and minimize bloat.
   soft link to this repo.
 - When done with changes run `deploy-repo.sh` to deploy the config to the
   proper location.
+- To save backup of lazy-lock.json run:
+  `cp ~/.config/nvim/lazy-lock.json ./lazy-lock.json.bk`
 
 ## Useful commands
 
@@ -26,7 +28,3 @@ and minimize bloat.
 - `~/.local/share/nvim`
 - `~/.local/state/nvim`
 - `~/.cache/nvim`
-
-## TODO
-
-- Manage lazy lock file
