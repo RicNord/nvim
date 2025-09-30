@@ -130,7 +130,7 @@ return {
                 local config = servers[server] or {}
                 config.capabilities = config.capabilities or capabilities
                 config.on_attach = config.on_attach or on_attach
-                lspconfig[server].setup(vim.tbl_extend("force", default_config, config))
+                vim.lsp.config(server, vim.tbl_extend("force", default_config, config))
             end
         end,
     },
