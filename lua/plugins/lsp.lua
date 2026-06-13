@@ -57,7 +57,7 @@ return {
             local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
             -- LSP log level
-            vim.lsp.set_log_level("OFF") -- Turn on when debugging
+            vim.lsp.log.set_level("OFF") -- Turn on when debugging
 
             -- Diagnostics
             vim.diagnostic.config({
