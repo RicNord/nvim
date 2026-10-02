@@ -28,3 +28,6 @@ keymap("n", "<leader>cdc", "<cmd>lua vim.fn.chdir(vim.fs.dirname(vim.api.nvim_bu
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- Keybindings help
+vim.keymap.set("n", "<leader>?", "<cmd>KeybindingsHelp<CR>", { desc = "Open keybindings help", silent = true })
