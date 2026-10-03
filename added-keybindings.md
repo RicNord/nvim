@@ -52,7 +52,21 @@
 
 - `<leader>u` toggle undotree
 
+## Diffview
+
+- `<leader>gd` open diff view of working tree changes
+- `<leader>gh` open file history for the current file
+- `:DiffviewClose` or `:tabclose` to close
+
 ## Rooter
 
 - `<leader>cdc` set open file buffer location as cwd
 - `<leader>cdr` set root of repo or fallback metaroot as cwd
+
+## OpenCode
+
+- `<C-.>` toggle OpenCode terminal (normal and terminal mode)
+- `<C-a>` ask OpenCode (normal and visual mode)
+- `<C-x>` select OpenCode command/prompt (normal and visual mode)
+- `go{motion}` send range to OpenCode (operator)
+- `goo` send current line to OpenCode
