@@ -58,6 +58,10 @@
 - `<leader>gh` open file history for the current file
 - `:DiffviewClose` or `:tabclose` to close
 
+## Nvim-tree
+
+- `<leader>e` toggle file explorer
+
 ## Rooter
 
 - `<leader>cdc` set open file buffer location as cwd
